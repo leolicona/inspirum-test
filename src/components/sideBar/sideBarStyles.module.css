@@ -1,0 +1,6 @@
+.aside {
+    width: 50%;
+    height: 100vh;
+    padding: 16px;
+    border: 1px dotted red;
+}
