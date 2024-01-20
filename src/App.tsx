@@ -1,16 +1,22 @@
-import Button from './components/button/Button'
-import InputText from './components/input/InputText'
-import SideBar from './components/sideBar/SideBard'
-import SideBarLayout from './modules/layout/sideBardLayout/SideBarLayout'
 import Loging from './components/loging/Loging'
+import PrivateRoute from './components/privateRoute/PrivateRoute'
+import useAuth from './hooks/useAuth'
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 function App (): JSX.Element {
+  const { user } = useAuth()
+
   return (
-    <>
-      <SideBarLayout>
-        <InputText label="Nombre" type="text" placeholder="Nombre"/>
-        <Loging/>
-      </SideBarLayout>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Loging/>}/>
+        <Route path="/test" element={<h1>Test route</h1>}/>
+        <Route element={<PrivateRoute user={user}/>}>
+          <Route path="/" element={<h1>Private</h1>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
