@@ -1,0 +1,29 @@
+.list {
+    text-decoration: none;
+    list-style: none;
+    border-radius: 5px;
+    height: 38px;
+    padding: 4px 8px;
+
+    cursor: pointer; 
+    text-align: justify;
+    display: flex;
+    align-items: center;
+}
+
+.select{
+    background-color:  #008fce; 
+}
+
+.list > a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    color:white; ;
+    padding: 2px;
+}
+
+.list:hover {
+    text-decoration: none;
+    background-color: #008fce ;
+}

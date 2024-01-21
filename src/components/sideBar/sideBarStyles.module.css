@@ -1,6 +1,51 @@
+.container {
+    display: flex ;
+    gap: 24px;
+    width: 100%;
+    max-width: 200px;
+    height: 100vh;
+
+
+}
 .aside {
-    width: 50%;
+    position: fixed;
+    width: 100%;
+    max-width: 200px;
     height: 100vh;
     padding: 16px;
-    border: 1px dotted red;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: #036089;
+    color: white;
+    z-index: 1;
 }
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.isSelected {
+    background-color: #E0E0E0;
+    color: #036089;
+    border-radius: 5px;
+} 
+
+
+@media (max-width: 760px) {
+    .container {
+     display: none; 
+    }
+    .aside {
+      max-width: 100%;   
+    }
+
+    .asideOpen {
+        display: flex;
+    }
+    
+}
+

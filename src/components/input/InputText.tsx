@@ -3,11 +3,11 @@ import type { InputHTMLAttributes } from 'react'
 import style from './inputTextStyles.module.css'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  label: string
+  children?: React.ReactNode
 }
 
-function InputText ({ label, ...props }: InputProps): JSX.Element {
-  return <label className={style.label}>{label}<input className={style.inpiut} {...props}/></label>
+function InputText ({ children, ...props }: InputProps): JSX.Element {
+  return <label className={style.label}>{children}<input className={style.input } {...props}/></label>
 }
 
 export default InputText

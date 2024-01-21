@@ -1,5 +1,6 @@
-import { useState } from 'react'
 import type { UserLoging, User } from '../types/user.model'
+import { useAppDispatch, useAppSelector } from '../store/store'
+import { setLoggedUser } from '../store/auth/slice'
 
 interface Login {
   user: User | null
@@ -27,24 +28,26 @@ const users: User[] = [
 ]
 
 function useAuth (): Login {
-  const [user, setUser] = useState<User | null>(null)
+  const dispatch = useAppDispatch()
+
+  // const [user, setUser] = useState<User | null>(null)
+  const loggedUser = useAppSelector((state) => state.auth.user)
 
   const login = ({ useremail, password }: UserLoging): void => {
     const userLogged = users.find((user: User): boolean => user.email === useremail && user.password === password)
-
     if (userLogged !== undefined) {
-      setUser(userLogged)
+      dispatch(setLoggedUser(userLogged))
     } else {
-      setUser(null)
+      dispatch(setLoggedUser(null))
     }
   }
 
   const logout = (): void => {
-    setUser(null)
+    dispatch(setLoggedUser(null))
   }
 
   return {
-    user,
+    user: loggedUser,
     login,
     logout
   }

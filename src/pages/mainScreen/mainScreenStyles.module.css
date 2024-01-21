@@ -1,0 +1,36 @@
+.coutriesSection {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.coutriesSection > :first-child {
+    position: sticky;
+    height: 60px;
+    top: 2%;
+    background-color:  #E0E0E0;
+}
+
+.coutriesSection > :nth-child(even) {
+    background-color: #E0E0E0; 
+}
+
+.headTags {
+    color: black;
+}
+
+@media (max-width: 576px) {
+    .coutriesSection > :first-child {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .elemetTag{
+        display: none;
+    }  
+  
+} 

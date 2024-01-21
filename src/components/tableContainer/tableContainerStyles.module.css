@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: first baseline;
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 576px) {
+    .container {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+

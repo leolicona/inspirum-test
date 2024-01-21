@@ -11,11 +11,12 @@ interface Props {
   redirectTo?: string
 }
 
-function PrivateRoute ({ user, children, redirectTo = '/loging' }: Props): JSX.Element {
+function PrivateRoute ({ user, children, redirectTo = '/' }: Props): JSX.Element {
+  // const { user } = useAuth()
   if (user === null) {
     return <Navigate to={redirectTo} />
   }
-  return <> children ? { children } : <Outlet/> </>
+  return children !== undefined ? <> {children} </> : <Outlet/>
 }
 
 export default PrivateRoute

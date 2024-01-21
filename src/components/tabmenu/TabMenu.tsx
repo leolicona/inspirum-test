@@ -1,10 +1,13 @@
-interface Props {
+import style from './tabMenuStyles.module.css'
+
+interface Props extends React.HTMLAttributes<HTMLLIElement> {
   children: React.ReactNode
+  isSelected: boolean
 }
 
-function TabMenu ({ children }: Props): JSX.Element {
+function TabMenu ({ children, isSelected, ...props }: Props): JSX.Element {
   return (
-        <li>{children}</li>
+        <li className={isSelected ? `${style.list} ${style.select}` : style.list } {...props}>{children}</li>
   )
 }
 
