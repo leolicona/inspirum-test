@@ -1,5 +1,9 @@
+
+
 .label {
+    position: relative;
     width: 100%;
+    max-width: 312px;
     color: #181818;
     font-size: 14px;
     font-style: normal;
@@ -9,6 +13,7 @@
 }
 
 .input {
+    position: relative;
     width: 100%;
     max-width: 312px;
     height: 38px;
@@ -32,3 +37,10 @@
 input:focus {
     border-color: #008fce;
   }
+
+.visibility {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    cursor: pointer;
+}

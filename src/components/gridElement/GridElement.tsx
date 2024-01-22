@@ -1,12 +1,12 @@
 import style from './gridElementStyles.module.css'
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLSpanElement> {
   children: React.ReactNode
 }
 
-const GridElement = ({ children }: Props): JSX.Element => {
+const GridElement = ({ children, ...props }: Props): JSX.Element => {
   return (
-        <span className={style.element}>
+        <span className={style.element} {...props}>
             {children}
         </span>
   )

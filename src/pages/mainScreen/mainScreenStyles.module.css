@@ -10,8 +10,9 @@
 .coutriesSection > :first-child {
     position: sticky;
     height: 60px;
-    top: 2%;
-    background-color:  #E0E0E0;
+    top: 0;
+    border: none;
+    background-color: #F8F8F8; 
 }
 
 .coutriesSection > :nth-child(even) {
@@ -19,12 +20,52 @@
 }
 
 .headTags {
-    color: black;
+    width: 100%;
+    max-width: 230px;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #0072a6;
+    border: 1px solid #0072a6;
+    border-radius: 8px;
+    padding: 8px 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.elemetTag {
+    font-size: 14px;
+    font-weight: 600;
+
+    
+}
+
+@media (max-width: 960px) {
+    .headTags {
+        min-width: unset;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .headTags > :first-child {
+        display: none;
+    }
+
 }
 
 @media (max-width: 576px) {
     .coutriesSection > :first-child {
-        display: none;
+       flex-direction: row;
+       gap: 4px;
+      
+    }
+
+    .headTags {
+        min-width: unset;
+        font-size: 11px;
+        padding: 4px;
     }
 }
 

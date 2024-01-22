@@ -1,6 +1,7 @@
 export interface UserLoging {
   useremail: string
   password: string
+  redirectTo?: string
 }
 
 export interface User {
