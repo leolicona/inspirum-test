@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# React Dashboard Application Coding Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was developed by Leo Licona. 
 
-Currently, two official plugins are available:
+For any queries, you can reach out at leolicona.dev@gmail.com.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+Follow these steps to run this web application:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Install all dependencies:
+  ```
+  npm install
+  ```
+2. Run the project:
+  ```
+  npm run dev
+  ```
 
-- Configure the top-level `parserOptions` property like this:
+## Login Credentials
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+You can use the following credentials to log in:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+**User 1:**
+- Email: leolicona.dev@gmail.com
+- Password: 123456
+
+**User 2:**
+- Email: davidlicona.dev@gmail.com
+- Password: 123456
